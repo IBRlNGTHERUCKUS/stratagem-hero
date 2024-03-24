@@ -1,15 +1,15 @@
 class Stratagem {
     constructor(name, sequence) {
-    this.sequence = sequence;
-    this.name = name;
+        this.sequence = sequence;
+        this.name = name;
     }
     getSequenceInput(index) {
-    return sequence[index];
+        return this.sequence[index];
      }
 }
 const demoList = [new Stratagem("Orbital Airburst", ["right", "right", "right"] )]
 
-const GameStuff = {
+/* const GameStuff = {
     index: 0,
     stratagems: demoList,
     checkMatch: function(keyPressed) {
@@ -24,13 +24,34 @@ const GameStuff = {
         return (index > currentStratagem.length + 1)
     },
     nextStratagem: function() {
-        currentStratagem = stratagems.pop(); ppl
+        currentStratagem = stratagems.pop(); 
+        }
+    }
+} 
         
-        
-    },
+      */
+    
+
+class GameController {
+    constructor(stratagemList) {
+        this.stratagemList = stratagemList; 
+        this.currentStratagem = this.stratagemList.pop();
+        this.index = 0;
+    }
+    checkMatch(key) {
+        if (key == this.currentStratagem.getSequenceInput(this.index)) {
+            return true;
+        }
+        else {
+            return false
+        } 
+    } 
 }
 
-GameStuff.currentStratagem = GameStuff.stratagems[0];
+const test = new GameController(demoList);
+console.log(test.currentStratagem);
+console.log(test.checkMatch("right"));
+console.log(test.checkMatch("left"));
 
 
 function handleKeypress(e) {
