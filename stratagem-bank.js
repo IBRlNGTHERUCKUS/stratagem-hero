@@ -4,279 +4,279 @@
 const data = {"stratagems" : [
         {
             "name" : "Machine Gun",
-            "sequence" : ["down", "left", "down", "up", "right"],
+            "sequence" : ["DownArrrow", "LeftArrow", "DownArrrow", "UpArrrow", "RightArrow"],
             "iconUrl" : ""
         },
         {
             "name" : "Anti-Material Rifle",
-            "sequence" : [	"down", "left", "right", "up", "down"],
+            "sequence" : [	"DownArrrow", "LeftArrow", "RightArrow", "UpArrrow", "DownArrrow"],
             "iconUrl" : ""
         },
         {
             "name" : "Stalwart",
-            "sequence" : ["down", "left", "down", "up", "up", "left"],
+            "sequence" : ["DownArrrow", "LeftArrow", "DownArrrow", "UpArrrow", "UpArrrow", "LeftArrow"],
             "iconUrl" : ""
         },
         {
             "name" : "Expendable Anti-Tank",
-            "sequence" : ["down", "down", "left", "up", "right"],
+            "sequence" : ["DownArrrow", "DownArrrow", "LeftArrow", "UpArrrow", "RightArrow"],
             "iconUrl" : ""
         },
         {
             "name" : "Recoiled Rifle",
-            "sequence" : ["down", "left", "right", "right", "left"],
+            "sequence" : ["DownArrrow", "LeftArrow", "RightArrow", "RightArrow", "LeftArrow"],
             "iconUrl" : ""
         },
         {
             "name" : "Flamethrower",
-            "sequence" : ["down", "left", "up", "down", "up"],
+            "sequence" : ["DownArrrow", "LeftArrow", "UpArrrow", "DownArrrow", "UpArrrow"],
             "iconUrl" : ""
         },
         {
             "name" : "Autocannon",
-            "sequence" : ["down", "left", "down", "up", "up", "right"
+            "sequence" : ["DownArrrow", "LeftArrow", "DownArrrow", "UpArrrow", "UpArrrow", "RightArrow"
         ],
             "iconUrl" : ""
         },
         {
             "name" : "Railgun",
-            "sequence" : ["down", "right", "left", "down", "up", "left", "right"
+            "sequence" : ["DownArrrow", "RightArrow", "LeftArrow", "DownArrrow", "UpArrrow", "LeftArrow", "RightArrow"
         ],
             "iconUrl" : ""
         },
         {
             "name" : "Spear",
-            "sequence" : ["down", "down", "up", "down", "down"],
+            "sequence" : ["DownArrrow", "DownArrrow", "UpArrrow", "DownArrrow", "DownArrrow"],
             "iconUrl" : ""
         },
         {
             "name" : "Eagle Strafing Run",
-            "sequence" : ["up", "right", "right"],
+            "sequence" : ["UpArrrow", "RightArrow", "RightArrow"],
             "iconUrl" : ""
         },
         {
             "name" : "Eagle Airstrike",
-            "sequence" : ["up", "right", "down", "right"],
+            "sequence" : ["UpArrrow", "RightArrow", "DownArrrow", "RightArrow"],
             "iconUrl" : ""
         },
         {
             "name" : "Eagle Cluster Bomb",
-            "sequence" : ["up", "right", "down", "down", "right"],
+            "sequence" : ["UpArrrow", "RightArrow", "DownArrrow", "DownArrrow", "RightArrow"],
             "iconUrl" : ""
         },
         {
             "name" : "Eagle Napalm Airstrike",
-            "sequence" : ["up", "right", "down", "up"],
+            "sequence" : ["UpArrrow", "RightArrow", "DownArrrow", "UpArrrow"],
             "iconUrl" : ""
         },
         {
             "name" : "Jump Pack",
-            "sequence" : ["down", "up", "up", "down", "up"],
+            "sequence" : ["DownArrrow", "UpArrrow", "UpArrrow", "DownArrrow", "UpArrrow"],
             "iconUrl" : ""
         },
         {
             "name" : "Eagle Smoke Strike",
-            "sequence" : ["up", "right", "up", "down"
+            "sequence" : ["UpArrrow", "RightArrow", "UpArrrow", "DownArrrow"
         ],
             "iconUrl" : ""
         },
         {
             "name" : "Eagle 110MM Rocket Pods",
-            "sequence" : ["up", "right", "up", "left"
+            "sequence" : ["UpArrrow", "RightArrow", "UpArrrow", "LeftArrow"
         ],
             "iconUrl" : ""
         },
 
         {
             "name" : "Eagle 500KG Bomb",
-            "sequence" : ["up", "right", "down", "down", "down"
+            "sequence" : ["UpArrrow", "RightArrow", "DownArrrow", "DownArrrow", "DownArrrow"
         ],
             "iconUrl" : ""
         },
 
         {
             "name" : "Orbital Gatling Barrage",
-            "sequence" : ["right", "down", "left", "up", "up"
+            "sequence" : ["RightArrow", "DownArrrow", "LeftArrow", "UpArrrow", "UpArrrow"
         ],
             "iconUrl" : ""
         },
         {
             "name" : "Orbital Airburst Strike",
-            "sequence" : ["right", "right", "right"
+            "sequence" : ["RightArrow", "RightArrow", "RightArrow"
         ],
             "iconUrl" : ""
         },
         {
             "name" : "Orbital 120MM HE Barrage",
-            "sequence" : ["right", "down", "left", "right", "down"
+            "sequence" : ["RightArrow", "DownArrrow", "LeftArrow", "RightArrow", "DownArrrow"
         ],
             "iconUrl" : ""
         },
 
         {
             "name" : "Orbital Walking Barrage",
-            "sequence" : ["right", "down", "up", "up", "left", "down", "down"
+            "sequence" : ["RightArrow", "DownArrrow", "UpArrrow", "UpArrrow", "LeftArrow", "DownArrrow", "DownArrrow"
         ],
             "iconUrl" : ""
         },
 
         {
             "name" : "Orbital 380MM HE Barrage",
-            "sequence" : ["right", "right", "down", "left", "right", "down"
+            "sequence" : ["RightArrow", "RightArrow", "DownArrrow", "LeftArrow", "RightArrow", "DownArrrow"
         ],
             "iconUrl" : ""
         },
         {
             "name" : "Orbital Lasers",
-            "sequence" : ["right", "down", "up", "right", "down"
+            "sequence" : ["RightArrow", "DownArrrow", "UpArrrow", "RightArrow", "DownArrrow"
         ],
             "iconUrl" : ""
         },
         {
             "name" : "Orbital Railcannon Strike",
-            "sequence" : ["right", "up", "down", "down", "right"
+            "sequence" : ["RightArrow", "UpArrrow", "DownArrrow", "DownArrrow", "RightArrow"
         ],
             "iconUrl" : ""
         },
 
         {
             "name" : "Orbital Precision Strike",
-            "sequence" : ["right", "right", "up"
+            "sequence" : ["RightArrow", "RightArrow", "UpArrrow"
         ],
             "iconUrl" : ""
         },
 
         {
             "name" : "Orbital Gas Strike",
-            "sequence" : ["right", "right", "down", "right"
+            "sequence" : ["RightArrow", "RightArrow", "DownArrrow", "RightArrow"
         ],
             "iconUrl" : ""
         },
         {
             "name" : "Orbital EMS Strike",
-            "sequence" : ["right", "right", "left", "down"
+            "sequence" : ["RightArrow", "RightArrow", "LeftArrow", "DownArrrow"
         ],
             "iconUrl" : ""
         },
         {
             "name" : "Orbital Smoke Strike",
-            "sequence" : ["right", "right", "down", "up"
+            "sequence" : ["RightArrow", "RightArrow", "DownArrrow", "UpArrrow"
         ],
             "iconUrl" : ""
         },
 
         {
             "name" : "HMG Emplacement",
-            "sequence" : ["down", "up", "left", "right", "right", "left"
+            "sequence" : ["DownArrrow", "UpArrrow", "LeftArrow", "RightArrow", "RightArrow", "LeftArrow"
         ],
             "iconUrl" : ""
         },
 
         {
             "name" : "Shield Generation Relay",
-            "sequence" : ["down", "up", "left", "down", "right", "right"],
+            "sequence" : ["DownArrrow", "UpArrrow", "LeftArrow", "DownArrrow", "RightArrow", "RightArrow"],
             "iconUrl" : ""
         },
         {
             "name" : "Tesla Tower",
-            "sequence" : ["down", "up", "right", "up", "left", "right"
+            "sequence" : ["DownArrrow", "UpArrrow", "RightArrow", "UpArrrow", "LeftArrow", "RightArrow"
         ],
             "iconUrl" : ""
         },
         {
             "name" : "Machine Gun Sentry",
-            "sequence" : ["down", "up", "right", "right", "up"
+            "sequence" : ["DownArrrow", "UpArrrow", "RightArrow", "RightArrow", "UpArrrow"
         ],
             "iconUrl" : ""
         },
         {
             "name" : "Gatling Sentry",
-            "sequence" : ["down", "up", "right", "left"
+            "sequence" : ["DownArrrow", "UpArrrow", "RightArrow", "LeftArrow"
         ],
             "iconUrl" : ""
         },
         {
             "name" : "Mortar Sentry",
-            "sequence" : ["down", "up", "right", "right", "down"
+            "sequence" : ["DownArrrow", "UpArrrow", "RightArrow", "RightArrow", "DownArrrow"
         ],
             "iconUrl" : ""
         },
         {
             "name" : "Guard Dog",
-            "sequence" : ["down", "up", "left", "up", "right", "down"
+            "sequence" : ["DownArrrow", "UpArrrow", "LeftArrow", "UpArrrow", "RightArrow", "DownArrrow"
         ],
             "iconUrl" : ""
         },
         {
             "name" : "Autocannon Sentry",
-            "sequence" : ["down", "up", "right", "up", "left", "up"
+            "sequence" : ["DownArrrow", "UpArrrow", "RightArrow", "UpArrrow", "LeftArrow", "UpArrrow"
         ],
             "iconUrl" : ""
         },
         {
             "name" : "Rocket Sentry",
-            "sequence" : ["down", "up", "right", "right", "left"
+            "sequence" : ["DownArrrow", "UpArrrow", "RightArrow", "RightArrow", "LeftArrow"
         ],
             "iconUrl" : ""
         },
         {
             "name" : "EMS Mortar Sentry",
-            "sequence" : ["down", "down", "up", "up", "left"
+            "sequence" : ["DownArrrow", "DownArrrow", "UpArrrow", "UpArrrow", "LeftArrow"
         ],
             "iconUrl" : ""
         },
         {
             "name" : "Anti-Personnel Minefield",
-            "sequence" : ["down", "left", "up", "right"
+            "sequence" : ["DownArrrow", "LeftArrow", "UpArrrow", "RightArrow"
         ],
             "iconUrl" : ""
         },
 
         {
             "name" : "Supply Pack",
-            "sequence" : ["down", "left", "down", "up", "up", "down"
+            "sequence" : ["DownArrrow", "LeftArrow", "DownArrrow", "UpArrrow", "UpArrrow", "DownArrrow"
         ],
             "iconUrl" : ""
         },
         {
             "name" : "Grenade Launcher",
-            "sequence" : ["down", "left", "up", "left", "down"
+            "sequence" : ["DownArrrow", "LeftArrow", "UpArrrow", "LeftArrow", "DownArrrow"
         ],
             "iconUrl" : ""
         },
         {
             "name" : "Laser Cannon",
-            "sequence" : ["down", "left", "down", "up", "left"
+            "sequence" : ["DownArrrow", "LeftArrow", "DownArrrow", "UpArrrow", "LeftArrow"
         ],
             "iconUrl" : ""
         },
         {
             "name" : "Incendiary Mines",
-            "sequence" : ["down", "left", "left", "down"
+            "sequence" : ["DownArrrow", "LeftArrow", "LeftArrow", "DownArrrow"
         ],
             "iconUrl" : ""
         },  {
             "name" : "Guard Dog Rover",
-            "sequence" : ["down", "up", "left", "up", "right", "right"
+            "sequence" : ["DownArrrow", "UpArrrow", "LeftArrow", "UpArrrow", "RightArrow", "RightArrow"
         ],
             "iconUrl" : ""
         },
 
           {
             "name" : "Ballistic Shield Backpack",
-            "sequence" : ["down", "left", "up", "up", "right"
+            "sequence" : ["DownArrrow", "LeftArrow", "UpArrrow", "UpArrrow", "RightArrow"
         ],
             "iconUrl" : ""
         },
         {
             "name" : "Arc thrower",
-            "sequence" : ["down", "right", "up", "left", "down"
+            "sequence" : ["DownArrrow", "RightArrow", "UpArrrow", "LeftArrow", "DownArrrow"
         ],
             "iconUrl" : ""
         },
         {
             "name" : "Shield Generator Pack",
-            "sequence" : ["down", "up", "left", "right", "left", "right"
+            "sequence" : ["DownArrrow", "UpArrrow", "LeftArrow", "RightArrow", "LeftArrow", "RightArrow"
         ],
             "iconUrl" : ""
         }

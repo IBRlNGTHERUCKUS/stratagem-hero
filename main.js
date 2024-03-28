@@ -23,6 +23,10 @@ class GameController {
         this.currentStratagem = this.stratagemList.pop();
         this.index = 0;
     }
+    getRandomStratagems(amount) {
+        
+    }
+    
     checkMatch(key) {
         if (key == this.currentStratagem.getSequenceInput(this.index)) {
             return true;
