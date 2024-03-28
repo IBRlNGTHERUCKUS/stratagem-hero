@@ -1,36 +1,18 @@
 class Stratagem {
-    constructor(name, sequence) {
+    constructor(name, sequence, iconAddress) {
         this.sequence = sequence;
         this.name = name;
+        this.iconAddress = iconAddress;
     }
     getSequenceInput(index) {
         return this.sequence[index];
      }
 }
-const demoList = [new Stratagem("Orbital Airburst", ["right", "right", "right"] )]
-
-/* const GameStuff = {
-    index: 0,
-    stratagems: demoList,
-    checkMatch: function(keyPressed) {
-        if (keyPressed ==  currentStratagem.getSequenceInput(index)) {
-                return True;
-        }
-        else {
-                return False;
-        }
-    },
-    checkComplete: function() {
-        return (index > currentStratagem.length + 1)
-    },
-    nextStratagem: function() {
-        currentStratagem = stratagems.pop(); 
-        }
-    }
-} 
-        
-      */
-    
+const demoList = [
+    new Stratagem("Orbital Airburst", ["ArrowRight", "ArrowRight", "ArrowRight"], "./images/Orbital Airburst Strike.svg"),
+    new Stratagem("Orbital Strike", ["ArrowDown", "ArrowRight", "ArrowRight"], "./images/Orbital Airburst Strike.svg"),
+    new Stratagem("Orbital Strike", ["ArrowDown", "ArrowRight", "ArrowRight"], "./images/Orbital Airburst Strike.svg")
+]
 
 class GameController {
     constructor(stratagemList) {
@@ -43,27 +25,55 @@ class GameController {
             return true;
         }
         else {
-            return false
-        } 
-    } 
-}
+            return false;
+        }
+    }
+    nextStratagem() {
+        this.currentStratagem = this.stratagemList.pop(); 
+    }
+    checkComplete() {
+        if (this.index+1 > this.currentStratagem.sequence.length) {
+            console.log('Stratagem is complete!');
+            return true;
+        }
+    }
+} 
+const activeGame = new GameController(demoList);
 
-const test = new GameController(demoList);
-console.log(test.currentStratagem);
-console.log(test.checkMatch("right"));
-console.log(test.checkMatch("left"));
-
-
-function handleKeypress(e) {
-    if (GameStuff.checkMatch(e) ) {
-         GameStuff.index++;
-        if (GameStuff.checkComplete()) {
-            GameStuff.index = 0;
-            GameStuff.nextStratagem();
-            }
-    else {
-         GameStuff.index = 0;
-        }     
+const DOMstuff = {
+    generateStratagemQueue: function() {
+        const stratagemQueueEl = document.querySelector('.stratagem-queue');
+        for (let stratagem of activeGame.stratagemList) {
+            const imgEl = document.createElement('img');
+            imgEl.classList.add('stratagem-icon');
+            imgEl.src = stratagem.iconAddress;
+            stratagemQueueEl.append(imgEl);
+        }
+    },
+    generateCurrentStratagem: function() {
+        const currentStratagemEl = document.querySelector('.current-stratagem');
+        
     }
 }
-//document.querySelector("body").addEventListener("click", (e)=>{console.log(e) })
+DOMstuff.generateStratagemQueue();
+
+function handleKeydown(e) {
+    if (activeGame.checkMatch(e.key) ) {
+        // When the key pressed matches the next sequence input
+        console.log("Correct input");
+        activeGame.index++;
+        if (activeGame.checkComplete()) {
+            // When a stratagem has successfully been inputted
+            activeGame.index = 0;
+            activeGame.nextStratagem();
+            }
+        }
+    else {
+        // When the wrong key is pressed
+        activeGame.index = 0;
+        console.log("Incorrect input");
+        }     
+    
+}
+
+document.addEventListener("keydown", handleKeydown)
