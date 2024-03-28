@@ -52,7 +52,11 @@ const DOMstuff = {
     },
     generateCurrentStratagem: function() {
         const currentStratagemEl = document.querySelector('.current-stratagem');
-        
+    },
+    markInputCorrect: function(index) {
+        const sequenceEl = document.querySelector('.sequence');
+        const targetInput = sequenceEl.children.item(index);
+        targetInput.querySelector('path').classList.add('correct');
     }
 }
 DOMstuff.generateStratagemQueue();
@@ -61,6 +65,7 @@ function handleKeydown(e) {
     if (activeGame.checkMatch(e.key) ) {
         // When the key pressed matches the next sequence input
         console.log("Correct input");
+        DOMstuff.markInputCorrect(activeGame.index);
         activeGame.index++;
         if (activeGame.checkComplete()) {
             // When a stratagem has successfully been inputted
