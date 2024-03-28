@@ -1,5 +1,7 @@
-{
-    "stratagems" : [
+
+
+
+const data = {"stratagems" : [
         {
             "name" : "Machine Gun",
             "sequence" : ["down", "left", "down", "up", "right"],
@@ -280,3 +282,5 @@
         }
     ]
 }
+ 
+export default data;
