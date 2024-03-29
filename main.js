@@ -1,5 +1,5 @@
 import data from "./stratagem-bank.js";
-console.log(data);
+console.log(data.stratagems[0]);
 class Stratagem {
     constructor(name, sequence, iconAddress) {
         this.sequence = sequence;
@@ -10,6 +10,13 @@ class Stratagem {
         return this.sequence[index];
      }
 }
+
+function getRandomInt(min, max) {
+  const minCeiled = Math.ceil(min);
+  const maxFloored = Math.floor(max);
+  return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
+}
+
 const demoList = [
     new Stratagem("Orbital Airburst4", ["ArrowRight", "ArrowRight", "ArrowRight"], "./images/Orbital Airburst Strike.svg"),
     new Stratagem("Orbital Strike3", ["ArrowDown", "ArrowRight", "ArrowRight"], "./images/Orbital Airburst Strike.svg"),
@@ -19,12 +26,21 @@ const demoList = [
 
 class GameController {
     constructor(stratagemList) {
-        this.stratagemList = stratagemList; 
+        this.stratagemList = this.getRandomStratagems(5); 
         this.currentStratagem = this.stratagemList.pop();
         this.index = 0;
     }
     getRandomStratagems(amount) {
-        
+        let list = [];
+        for (let i = 0; i<amount; i++) { 
+            let randomNum = getRandomInt(0, data.stratagems.length)
+            console.log(randomNum);
+            let randomStrat = data.stratagems[randomNum];
+            let temp = new Stratagem(randomStrat.name,
+            randomStrat.sequence, randomStrat.iconAddress)
+            list.push(temp);
+        }
+        return list
     }
     
     checkMatch(key) {
@@ -91,6 +107,7 @@ const DOMstuff = {
             }
      },
      getClonedArrow: function(direction) {
+        console.log(direction);
         let temp = document.querySelector(`#${direction}`)
         return temp.content.cloneNode(true);
      },

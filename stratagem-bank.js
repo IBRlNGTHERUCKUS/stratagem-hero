@@ -4,281 +4,281 @@
 const data = {"stratagems" : [
         {
             "name" : "Machine Gun",
-            "sequence" : ["DownArrrow", "LeftArrow", "DownArrrow", "UpArrrow", "RightArrow"],
-            "iconUrl" : ""
+            "sequence" : ["ArrowDown", "ArrowLeft", "ArrowDown", "ArrowUp", "ArrowRight"],
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Anti-Material Rifle",
-            "sequence" : [	"DownArrrow", "LeftArrow", "RightArrow", "UpArrrow", "DownArrrow"],
-            "iconUrl" : ""
+            "sequence" : [	"ArrowDown", "ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"],
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Stalwart",
-            "sequence" : ["DownArrrow", "LeftArrow", "DownArrrow", "UpArrrow", "UpArrrow", "LeftArrow"],
-            "iconUrl" : ""
+            "sequence" : ["ArrowDown", "ArrowLeft", "ArrowDown", "ArrowUp", "ArrowUp", "ArrowLeft"],
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Expendable Anti-Tank",
-            "sequence" : ["DownArrrow", "DownArrrow", "LeftArrow", "UpArrrow", "RightArrow"],
-            "iconUrl" : ""
+            "sequence" : ["ArrowDown", "ArrowDown", "ArrowLeft", "ArrowUp", "ArrowRight"],
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Recoiled Rifle",
-            "sequence" : ["DownArrrow", "LeftArrow", "RightArrow", "RightArrow", "LeftArrow"],
-            "iconUrl" : ""
+            "sequence" : ["ArrowDown", "ArrowLeft", "ArrowRight", "ArrowRight", "ArrowLeft"],
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Flamethrower",
-            "sequence" : ["DownArrrow", "LeftArrow", "UpArrrow", "DownArrrow", "UpArrrow"],
-            "iconUrl" : ""
+            "sequence" : ["ArrowDown", "ArrowLeft", "ArrowUp", "ArrowDown", "ArrowUp"],
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Autocannon",
-            "sequence" : ["DownArrrow", "LeftArrow", "DownArrrow", "UpArrrow", "UpArrrow", "RightArrow"
+            "sequence" : ["ArrowDown", "ArrowLeft", "ArrowDown", "ArrowUp", "ArrowUp", "ArrowRight"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Railgun",
-            "sequence" : ["DownArrrow", "RightArrow", "LeftArrow", "DownArrrow", "UpArrrow", "LeftArrow", "RightArrow"
+            "sequence" : ["ArrowDown", "ArrowRight", "ArrowLeft", "ArrowDown", "ArrowUp", "ArrowLeft", "ArrowRight"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Spear",
-            "sequence" : ["DownArrrow", "DownArrrow", "UpArrrow", "DownArrrow", "DownArrrow"],
-            "iconUrl" : ""
+            "sequence" : ["ArrowDown", "ArrowDown", "ArrowUp", "ArrowDown", "ArrowDown"],
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Eagle Strafing Run",
-            "sequence" : ["UpArrrow", "RightArrow", "RightArrow"],
-            "iconUrl" : ""
+            "sequence" : ["ArrowUp", "ArrowRight", "ArrowRight"],
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Eagle Airstrike",
-            "sequence" : ["UpArrrow", "RightArrow", "DownArrrow", "RightArrow"],
-            "iconUrl" : ""
+            "sequence" : ["ArrowUp", "ArrowRight", "ArrowDown", "ArrowRight"],
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Eagle Cluster Bomb",
-            "sequence" : ["UpArrrow", "RightArrow", "DownArrrow", "DownArrrow", "RightArrow"],
-            "iconUrl" : ""
+            "sequence" : ["ArrowUp", "ArrowRight", "ArrowDown", "ArrowDown", "ArrowRight"],
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Eagle Napalm Airstrike",
-            "sequence" : ["UpArrrow", "RightArrow", "DownArrrow", "UpArrrow"],
-            "iconUrl" : ""
+            "sequence" : ["ArrowUp", "ArrowRight", "ArrowDown", "ArrowUp"],
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Jump Pack",
-            "sequence" : ["DownArrrow", "UpArrrow", "UpArrrow", "DownArrrow", "UpArrrow"],
-            "iconUrl" : ""
+            "sequence" : ["ArrowDown", "ArrowUp", "ArrowUp", "ArrowDown", "ArrowUp"],
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Eagle Smoke Strike",
-            "sequence" : ["UpArrrow", "RightArrow", "UpArrrow", "DownArrrow"
+            "sequence" : ["ArrowUp", "ArrowRight", "ArrowUp", "ArrowDown"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Eagle 110MM Rocket Pods",
-            "sequence" : ["UpArrrow", "RightArrow", "UpArrrow", "LeftArrow"
+            "sequence" : ["ArrowUp", "ArrowRight", "ArrowUp", "ArrowLeft"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
 
         {
             "name" : "Eagle 500KG Bomb",
-            "sequence" : ["UpArrrow", "RightArrow", "DownArrrow", "DownArrrow", "DownArrrow"
+            "sequence" : ["ArrowUp", "ArrowRight", "ArrowDown", "ArrowDown", "ArrowDown"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
 
         {
             "name" : "Orbital Gatling Barrage",
-            "sequence" : ["RightArrow", "DownArrrow", "LeftArrow", "UpArrrow", "UpArrrow"
+            "sequence" : ["ArrowRight", "ArrowDown", "ArrowLeft", "ArrowUp", "ArrowUp"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Orbital Airburst Strike",
-            "sequence" : ["RightArrow", "RightArrow", "RightArrow"
+            "sequence" : ["ArrowRight", "ArrowRight", "ArrowRight"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Orbital 120MM HE Barrage",
-            "sequence" : ["RightArrow", "DownArrrow", "LeftArrow", "RightArrow", "DownArrrow"
+            "sequence" : ["ArrowRight", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowDown"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
 
         {
             "name" : "Orbital Walking Barrage",
-            "sequence" : ["RightArrow", "DownArrrow", "UpArrrow", "UpArrrow", "LeftArrow", "DownArrrow", "DownArrrow"
+            "sequence" : ["ArrowRight", "ArrowDown", "ArrowUp", "ArrowUp", "ArrowLeft", "ArrowDown", "ArrowDown"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
 
         {
             "name" : "Orbital 380MM HE Barrage",
-            "sequence" : ["RightArrow", "RightArrow", "DownArrrow", "LeftArrow", "RightArrow", "DownArrrow"
+            "sequence" : ["ArrowRight", "ArrowRight", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowDown"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Orbital Lasers",
-            "sequence" : ["RightArrow", "DownArrrow", "UpArrrow", "RightArrow", "DownArrrow"
+            "sequence" : ["ArrowRight", "ArrowDown", "ArrowUp", "ArrowRight", "ArrowDown"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Orbital Railcannon Strike",
-            "sequence" : ["RightArrow", "UpArrrow", "DownArrrow", "DownArrrow", "RightArrow"
+            "sequence" : ["ArrowRight", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowRight"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
 
         {
             "name" : "Orbital Precision Strike",
-            "sequence" : ["RightArrow", "RightArrow", "UpArrrow"
+            "sequence" : ["ArrowRight", "ArrowRight", "ArrowUp"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
 
         {
             "name" : "Orbital Gas Strike",
-            "sequence" : ["RightArrow", "RightArrow", "DownArrrow", "RightArrow"
+            "sequence" : ["ArrowRight", "ArrowRight", "ArrowDown", "ArrowRight"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Orbital EMS Strike",
-            "sequence" : ["RightArrow", "RightArrow", "LeftArrow", "DownArrrow"
+            "sequence" : ["ArrowRight", "ArrowRight", "ArrowLeft", "ArrowDown"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Orbital Smoke Strike",
-            "sequence" : ["RightArrow", "RightArrow", "DownArrrow", "UpArrrow"
+            "sequence" : ["ArrowRight", "ArrowRight", "ArrowDown", "ArrowUp"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
 
         {
             "name" : "HMG Emplacement",
-            "sequence" : ["DownArrrow", "UpArrrow", "LeftArrow", "RightArrow", "RightArrow", "LeftArrow"
+            "sequence" : ["ArrowDown", "ArrowUp", "ArrowLeft", "ArrowRight", "ArrowRight", "ArrowLeft"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
 
         {
             "name" : "Shield Generation Relay",
-            "sequence" : ["DownArrrow", "UpArrrow", "LeftArrow", "DownArrrow", "RightArrow", "RightArrow"],
-            "iconUrl" : ""
+            "sequence" : ["ArrowDown", "ArrowUp", "ArrowLeft", "ArrowDown", "ArrowRight", "ArrowRight"],
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Tesla Tower",
-            "sequence" : ["DownArrrow", "UpArrrow", "RightArrow", "UpArrrow", "LeftArrow", "RightArrow"
+            "sequence" : ["ArrowDown", "ArrowUp", "ArrowRight", "ArrowUp", "ArrowLeft", "ArrowRight"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Machine Gun Sentry",
-            "sequence" : ["DownArrrow", "UpArrrow", "RightArrow", "RightArrow", "UpArrrow"
+            "sequence" : ["ArrowDown", "ArrowUp", "ArrowRight", "ArrowRight", "ArrowUp"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Gatling Sentry",
-            "sequence" : ["DownArrrow", "UpArrrow", "RightArrow", "LeftArrow"
+            "sequence" : ["ArrowDown", "ArrowUp", "ArrowRight", "ArrowLeft"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Mortar Sentry",
-            "sequence" : ["DownArrrow", "UpArrrow", "RightArrow", "RightArrow", "DownArrrow"
+            "sequence" : ["ArrowDown", "ArrowUp", "ArrowRight", "ArrowRight", "ArrowDown"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Guard Dog",
-            "sequence" : ["DownArrrow", "UpArrrow", "LeftArrow", "UpArrrow", "RightArrow", "DownArrrow"
+            "sequence" : ["ArrowDown", "ArrowUp", "ArrowLeft", "ArrowUp", "ArrowRight", "ArrowDown"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Autocannon Sentry",
-            "sequence" : ["DownArrrow", "UpArrrow", "RightArrow", "UpArrrow", "LeftArrow", "UpArrrow"
+            "sequence" : ["ArrowDown", "ArrowUp", "ArrowRight", "ArrowUp", "ArrowLeft", "ArrowUp"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Rocket Sentry",
-            "sequence" : ["DownArrrow", "UpArrrow", "RightArrow", "RightArrow", "LeftArrow"
+            "sequence" : ["ArrowDown", "ArrowUp", "ArrowRight", "ArrowRight", "ArrowLeft"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "EMS Mortar Sentry",
-            "sequence" : ["DownArrrow", "DownArrrow", "UpArrrow", "UpArrrow", "LeftArrow"
+            "sequence" : ["ArrowDown", "ArrowDown", "ArrowUp", "ArrowUp", "ArrowLeft"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Anti-Personnel Minefield",
-            "sequence" : ["DownArrrow", "LeftArrow", "UpArrrow", "RightArrow"
+            "sequence" : ["ArrowDown", "ArrowLeft", "ArrowUp", "ArrowRight"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
 
         {
             "name" : "Supply Pack",
-            "sequence" : ["DownArrrow", "LeftArrow", "DownArrrow", "UpArrrow", "UpArrrow", "DownArrrow"
+            "sequence" : ["ArrowDown", "ArrowLeft", "ArrowDown", "ArrowUp", "ArrowUp", "ArrowDown"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Grenade Launcher",
-            "sequence" : ["DownArrrow", "LeftArrow", "UpArrrow", "LeftArrow", "DownArrrow"
+            "sequence" : ["ArrowDown", "ArrowLeft", "ArrowUp", "ArrowLeft", "ArrowDown"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Laser Cannon",
-            "sequence" : ["DownArrrow", "LeftArrow", "DownArrrow", "UpArrrow", "LeftArrow"
+            "sequence" : ["ArrowDown", "ArrowLeft", "ArrowDown", "ArrowUp", "ArrowLeft"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Incendiary Mines",
-            "sequence" : ["DownArrrow", "LeftArrow", "LeftArrow", "DownArrrow"
+            "sequence" : ["ArrowDown", "ArrowLeft", "ArrowLeft", "ArrowDown"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },  {
             "name" : "Guard Dog Rover",
-            "sequence" : ["DownArrrow", "UpArrrow", "LeftArrow", "UpArrrow", "RightArrow", "RightArrow"
+            "sequence" : ["ArrowDown", "ArrowUp", "ArrowLeft", "ArrowUp", "ArrowRight", "ArrowRight"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
 
           {
             "name" : "Ballistic Shield Backpack",
-            "sequence" : ["DownArrrow", "LeftArrow", "UpArrrow", "UpArrrow", "RightArrow"
+            "sequence" : ["ArrowDown", "ArrowLeft", "ArrowUp", "ArrowUp", "ArrowRight"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Arc thrower",
-            "sequence" : ["DownArrrow", "RightArrow", "UpArrrow", "LeftArrow", "DownArrrow"
+            "sequence" : ["ArrowDown", "ArrowRight", "ArrowUp", "ArrowLeft", "ArrowDown"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         },
         {
             "name" : "Shield Generator Pack",
-            "sequence" : ["DownArrrow", "UpArrrow", "LeftArrow", "RightArrow", "LeftArrow", "RightArrow"
+            "sequence" : ["ArrowDown", "ArrowUp", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight"
         ],
-            "iconUrl" : ""
+            "iconAddress" : "./images/Orbital Airburst Strike.svg"
         }
     ]
 }
