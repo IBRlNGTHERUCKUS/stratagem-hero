@@ -41,10 +41,12 @@ main {
 
 .current-stratagem {
     display: grid;
-    grid: auto auto / auto auto;
+    grid: auto auto / auto 1fr;
     gap: 12px;
-    justify-content: center;
-    align-content: center;
+    padding: 14px;
+    justify-items: start;
+    /*justify-content: center;
+    align-content: center;*/
     background-color: rgba(0, 0, 0, 0.688);
 }
 
@@ -54,7 +56,7 @@ main {
 
 .sequence {
     display: flex;
-    gap: 10px
+    gap: 10px; 
 }
 
 .sequence * {

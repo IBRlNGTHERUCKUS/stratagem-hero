@@ -17,16 +17,9 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
 }
 
-const demoList = [
-    new Stratagem("Orbital Airburst4", ["ArrowRight", "ArrowRight", "ArrowRight"], "./images/Orbital Airburst Strike.svg"),
-    new Stratagem("Orbital Strike3", ["ArrowDown", "ArrowRight", "ArrowRight"], "./images/Orbital Airburst Strike.svg"),
-    new Stratagem("Orbital Strike2", ["ArrowDown", "ArrowRight", "ArrowRight"], "./images/Orbital Airburst Strike.svg"),
-    new Stratagem("Orbital Strike1", ["ArrowRight", "ArrowRight", "ArrowRight"], "./images/Orbital Airburst Strike.svg")
-]
-
 class GameController {
     constructor(stratagemList) {
-        this.stratagemList = this.getRandomStratagems(5); 
+        this.stratagemList = this.getRandomStratagems(4); 
         this.currentStratagem = this.stratagemList.pop();
         this.index = 0;
     }
@@ -143,6 +136,7 @@ function handleKeydown(e) {
             // When a stratagem has successfully been inputted
             activeGame.index = 0;
             activeGame.nextStratagem();
+            activeGame.stratagemList.push(activeGame.getRandomStratagems(1)[0]);
             DOMstuff.update()
             }
         }
@@ -158,4 +152,6 @@ function handleKeydown(e) {
 document.addEventListener("keydown", handleKeydown)
 document.querySelector("button").addEventListener("click",
 ()=>{activeGame.nextStratagem(); 
-DOMstuff.update()}) 
+            activeGame.stratagemList.push(activeGame.getRandomStratagems(1)[0]);
+DOMstuff.update()}
+)   
