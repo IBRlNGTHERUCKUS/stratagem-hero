@@ -18,16 +18,16 @@ function getRandomInt(min, max) {
 }
 
 class GameController {
-    constructor(stratagemList) {
+    constructor() {
         this.stratagemList = this.getRandomStratagems(4); 
         this.currentStratagem = this.stratagemList.pop();
         this.index = 0;
+        this.score = 0;
     }
     getRandomStratagems(amount) {
         let list = [];
         for (let i = 0; i<amount; i++) { 
             let randomNum = getRandomInt(0, data.stratagems.length)
-            console.log(randomNum);
             let randomStrat = data.stratagems[randomNum];
             let temp = new Stratagem(randomStrat.name,
             randomStrat.sequence, randomStrat.iconAddress)
@@ -54,7 +54,7 @@ class GameController {
         }
     }
 } 
-const activeGame = new GameController(demoList);
+const activeGame = new GameController();
 
 const DOMstuff = {
     generateStratagemQueue: function() {
@@ -100,7 +100,6 @@ const DOMstuff = {
             }
      },
      getClonedArrow: function(direction) {
-        console.log(direction);
         let temp = document.querySelector(`#${direction}`)
         return temp.content.cloneNode(true);
      },
@@ -137,7 +136,7 @@ function handleKeydown(e) {
             activeGame.index = 0;
             activeGame.nextStratagem();
             activeGame.stratagemList.push(activeGame.getRandomStratagems(1)[0]);
-            DOMstuff.update()
+            DOMstuff.update();
             }
         }
     else {
@@ -145,13 +144,24 @@ function handleKeydown(e) {
         activeGame.index = 0;
         console.log("Incorrect input");
         DOMstuff.markSequenceNeutral;
+        DOMstuff.update();
         }     
     
 }
 
-document.addEventListener("keydown", handleKeydown)
+// button support for mobile
+const dBox = document.querySelector(".d-box");
+for(let btn of dBox.children) {
+   btn.addEventListener("mousedown", (e) => { 
+   let direction = e.target.dataset.key;
+   document.dispatchEvent(new KeyboardEvent('keydown', {'key': `${direction}`}));
+   })
+}
+
+document.addEventListener("keydown", handleKeydown) 
+//document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'ArrowDown'}));
 document.querySelector("button").addEventListener("click",
 ()=>{activeGame.nextStratagem(); 
             activeGame.stratagemList.push(activeGame.getRandomStratagems(1)[0]);
 DOMstuff.update()}
-)   
+)
