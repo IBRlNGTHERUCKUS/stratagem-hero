@@ -152,6 +152,9 @@ function handleKeydown(e) {
 // button support for mobile
 const dBox = document.querySelector(".d-box");
 for(let btn of dBox.children) {
+   btn.addEventListener('dblclick', function(el) {
+  el.preventDefault();
+});
    btn.addEventListener("mousedown", (e) => { 
    let direction = e.target.dataset.key;
    document.dispatchEvent(new KeyboardEvent('keydown', {'key': `${direction}`}));
