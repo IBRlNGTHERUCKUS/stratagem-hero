@@ -25,12 +25,17 @@ body {
 .scoreboard {
     text-align: center;
     color: yellow;
+    gap: 24px; 
     display: flex;
     justify-content: center;
 }
 
-.score {
-    color: white;
+.scoreboard div {
+  display: flex;
+}
+
+.score, .time {
+  color: white;
 }
 
 .stratagem-queue {

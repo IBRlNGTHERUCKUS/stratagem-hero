@@ -46,7 +46,7 @@ class GameController {
         this.index = 0;
         this.score = 0;
         this.isStarted = false;
-        this.timeLimit = 6;  //seconds
+        this.timeLimit = 30;  //seconds
         this.timer = new Timer(this.timeLimit);
     }
     getRandomStratagems(amount) {
@@ -115,6 +115,9 @@ const DOMstuff = {
         // Piece it all together
         currentStratagemEl.append(currentIconEl, currentNameEl, sequenceEl);
     },
+    generateEndScreen: function() {
+      
+    },
     markInputCorrect: function(index) {
         const sequenceEl = document.querySelector('.sequence');
         const targetInput = sequenceEl.children.item(index);
@@ -146,6 +149,11 @@ const DOMstuff = {
      updateScore(newScore) {
         const scoreEl =  document.querySelector(".score");
         scoreEl.textContent = newScore;
+     },
+     updateTimer(newTime) {
+      const timeEl = document.querySelector(".time");
+      timeEl.textContent = newTime.toFixed(2);
+     
      },
      update: function() {
          this.clearStratagemQueue();
@@ -193,7 +201,7 @@ function handleKeydown(e) {
 
 //********************************//
 
-setInterval(()=>{console.log(activeGame.timer.getRemaining())}, 1500)
+setInterval(()=>{DOMstuff.updateTimer(activeGame.timer.getRemaining())}, 100)
 
 
 // button support for mobile
