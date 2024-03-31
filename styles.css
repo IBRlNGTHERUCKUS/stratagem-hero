@@ -18,6 +18,8 @@ body {
 .game-title {
     text-align: center;
     text-shadow: black 2px 2px 3px;
+    margin: 0px;
+    padding: 14px;
 }
 
 .scoreboard {
@@ -88,6 +90,13 @@ main {
   display: grid;
   justify-content: center;
   grid: 80px 80px 80px / 80px 80px 80px;
+}
+
+.d-box input {
+    border-radius:12px;
+    background-color: white;
+    border: none;
+    width: 100%
 }
 
 .d-left {

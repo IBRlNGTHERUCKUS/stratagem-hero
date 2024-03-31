@@ -127,10 +127,10 @@ const data = {"stratagems" : [
         "iconAddress" : "images/Helldivers-2-Stratagems-icons-svg-master/Orbital Cannons/Orbital 380MM HE Barrage.svg"
     },
         {
-            "name" : "Orbital Lasers",
+            "name" : "Orbital Laser",
             "sequence" : ["ArrowRight", "ArrowDown", "ArrowUp", "ArrowRight", "ArrowDown"
         ],
-        "iconAddress" : "images/Helldivers-2-Stratagems-icons-svg/Orbital Cannons/Orbital Laser.svg"
+        "iconAddress" : "images/Helldivers-2-Stratagems-icons-svg-master/Orbital Cannons/Orbital Laser.svg"
     },
         {
             "name" : "Orbital Railcannon Strike",
