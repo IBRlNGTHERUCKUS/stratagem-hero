@@ -20,7 +20,7 @@ function getRandomInt(min, max) {
 class GameController {
     constructor() {
         this.stratagemList = this.getRandomStratagems(4); 
-        this.currentStratagem = this.stratagemList.pop();
+        this.currentStratagem = this.stratagemList.shift();
         this.index = 0;
         this.score = 0;
     }
@@ -35,7 +35,10 @@ class GameController {
         }
         return list
     }
-    
+    incrimentScore() {
+        this.score += 100;
+        console.log(this.score);
+     }
     checkMatch(key) {
         if (key == this.currentStratagem.getSequenceInput(this.index)) {
             return true;
@@ -45,7 +48,7 @@ class GameController {
         }
     }
     nextStratagem() {
-        this.currentStratagem = this.stratagemList.pop(); 
+        this.currentStratagem = this.stratagemList.shift(); 
     }
     checkComplete() {
         if (this.index+1 > this.currentStratagem.sequence.length) {
@@ -115,6 +118,10 @@ const DOMstuff = {
             currentStratagemEl.removeChild(currentStratagemEl.firstChild);
        }
      },
+     updateScore(newScore) {
+        const scoreEl =  document.querySelector(".score");
+        scoreEl.textContent = newScore;
+     },
      update: function() {
          this.clearStratagemQueue();
          this.clearCurrentStratagem();
@@ -133,9 +140,11 @@ function handleKeydown(e) {
         activeGame.index++;
         if (activeGame.checkComplete()) {
             // When a stratagem has successfully been inputted
+            activeGame.incrimentScore();
             activeGame.index = 0;
             activeGame.nextStratagem();
             activeGame.stratagemList.push(activeGame.getRandomStratagems(1)[0]);
+            DOMstuff.updateScore(activeGame.score);
             DOMstuff.update();
             }
         }
