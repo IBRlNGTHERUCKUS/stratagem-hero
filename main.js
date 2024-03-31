@@ -17,12 +17,37 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
 }
 
+class Timer {
+  constructor(limit) {
+    this.initial = null; // seconds
+    this.limit = limit;
+  }
+  startTimer() {
+    const temp = new Date();
+    this.initial = temp.getTime()/1000;
+    //console.log(`initial: ${this.initial}`);
+  }
+  getRemaining() {
+    const temp = new Date();
+    let elapsed = temp.getTime()/1000 - this.initial; 
+    //console.log(`elapsed: ${elapsed}`);
+    return (elapsed > this.limit) ? 0 : this.limit - elapsed;
+   }
+   isExpired() {
+    return this.getRemaining() == 0 ? true : false;
+   
+   }
+}
+
 class GameController {
     constructor() {
         this.stratagemList = this.getRandomStratagems(4); 
         this.currentStratagem = this.stratagemList.shift();
         this.index = 0;
         this.score = 0;
+        this.isStarted = false;
+        this.timeLimit = 6;  //seconds
+        this.timer = new Timer(this.timeLimit);
     }
     getRandomStratagems(amount) {
         let list = [];
@@ -43,7 +68,7 @@ class GameController {
         if (key == this.currentStratagem.getSequenceInput(this.index)) {
             return true;
         }
-        else {
+        else { 
             return false;
         }
     }
@@ -130,12 +155,22 @@ const DOMstuff = {
      }
 }
 
+//*******    gameloop    ***********//
 DOMstuff.update();
-
 function handleKeydown(e) {
-    if (activeGame.checkMatch(e.key) ) {
+    // start the timer on the first loop
+    if (!activeGame.isStarted) {
+      activeGame.timer.startTimer();
+      activeGame.isStarted = true;
+    }
+    
+    if (activeGame.timer.isExpired() ){
+      console.log("game over")
+      return; //Do nothing if timer is expired
+    }   
+    
+    if ( activeGame.checkMatch(e.key) ) {
         // When the key pressed matches the next sequence input
-        console.log("Correct input");
         DOMstuff.markInputCorrect(activeGame.index);
         activeGame.index++;
         if (activeGame.checkComplete()) {
@@ -151,12 +186,15 @@ function handleKeydown(e) {
     else {
         // When the wrong key is pressed
         activeGame.index = 0;
-        console.log("Incorrect input");
         DOMstuff.markSequenceNeutral;
         DOMstuff.update();
         }     
-    
 }
+
+//********************************//
+
+setInterval(()=>{console.log(activeGame.timer.getRemaining())}, 1500)
+
 
 // button support for mobile
 const dBox = document.querySelector(".d-box");
@@ -172,8 +210,6 @@ for(let btn of dBox.children) {
 
 document.addEventListener("keydown", handleKeydown) 
 //document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'ArrowDown'}));
-document.querySelector("button").addEventListener("click",
-()=>{activeGame.nextStratagem(); 
-            activeGame.stratagemList.push(activeGame.getRandomStratagems(1)[0]);
-DOMstuff.update()}
-)
+document.querySelector(".test-button").addEventListener("click", ()=> {
+  console.log(activeGame.timer.isExpired());
+} )
