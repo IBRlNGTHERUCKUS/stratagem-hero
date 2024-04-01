@@ -34,6 +34,7 @@ h1 {
     background: linear-gradient(180deg, rgba(255,47,47,1) 0%, rgba(255,238,0,1) 100%);
     background-clip: text;
     color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
     
 }
 
@@ -209,6 +210,7 @@ h1 {
 }
 
 .points-popup {
+    font-family: commando;
     font-size: 17vw;
     animation-name: fadeout;
     animation-duration: 1.5s;
