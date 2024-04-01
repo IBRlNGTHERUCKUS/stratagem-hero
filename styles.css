@@ -5,6 +5,8 @@ body {
     color: rgb(214, 205, 205);
     font-family:'Courier New', Courier, monospace;
     position: relative;
+    display: grid;
+    align-items: center;
 }
 h1 {
     margin: 0;
@@ -197,9 +199,12 @@ h1 {
 
 .points-popup {
     font-size: 17vw;
-    top: 30%;
     animation-name: fadeout;
     animation-duration: 1.5s;
+}
+
+.points-popup h1 {
+    transform: translateY(-200px);
 }
 
 .points-popup .low {
