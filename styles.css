@@ -108,6 +108,7 @@ h1 {
   display: grid;
   justify-content: center;
   grid: 80px 80px 80px / 80px 80px 80px;
+  padding: 12px;
 }
 
 .d-box input {
@@ -211,6 +212,7 @@ h1 {
     font-size: 17vw;
     animation-name: fadeout;
     animation-duration: 1.5s;
+    pointer-events: none;
 }
 
 .points-popup h1 {
