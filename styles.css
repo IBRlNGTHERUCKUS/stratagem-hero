@@ -181,3 +181,7 @@ main {
     background: yellow;
     border: solid rgba(28, 27, 27, 0.793) 4px;
 }
+
+.hidden {
+    display: none;
+}

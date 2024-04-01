@@ -28,9 +28,11 @@ class Timer {
     //console.log(`initial: ${this.initial}`);
   }
   getRemaining() {
+    if (this.initial==null) {  //If the timer has not been started
+        return this.limit;
+    }
     const temp = new Date();
     let elapsed = temp.getTime()/1000 - this.initial; 
-    //console.log(`elapsed: ${elapsed}`);
     return (elapsed > this.limit) ? 0 : this.limit - elapsed;
    }
    isExpired() {
@@ -43,11 +45,14 @@ class GameController {
     constructor() {
         this.stratagemList = this.getRandomStratagems(4); 
         this.currentStratagem = this.stratagemList.shift();
-        this.index = 0;
-        this.score = 0;
+        this.index = 0; // The index within the stratagem sequence
+        this.score = 0; 
+        this.called=0;
+        this.mistakes=0;
         this.isStarted = false;
         this.timeLimit = 30;  //seconds
         this.timer = new Timer(this.timeLimit);
+
     }
     getRandomStratagems(amount) {
         let list = [];
@@ -82,7 +87,7 @@ class GameController {
         }
     }
 } 
-const activeGame = new GameController();
+let activeGame = new GameController();
 
 const DOMstuff = {
     generateStratagemQueue: function() {
@@ -115,8 +120,14 @@ const DOMstuff = {
         // Piece it all together
         currentStratagemEl.append(currentIconEl, currentNameEl, sequenceEl);
     },
-    generateEndScreen: function() {
-      
+    generateSummary: function() {
+      const temp = document.querySelector("#summary");
+      const clone = temp.content.cloneNode(true);
+      document.querySelector('body').append(clone);
+      // Populate summary data
+      document.querySelector('#stratagems-called').textContent = activeGame.called;
+      document.querySelector('#points-earned').textContent = activeGame.score;
+      document.querySelector('#mistakes-made').textContent = activeGame.mistakes;
     },
     markInputCorrect: function(index) {
         const sequenceEl = document.querySelector('.sequence');
@@ -153,7 +164,11 @@ const DOMstuff = {
      updateTimer(newTime) {
       const timeEl = document.querySelector(".time");
       timeEl.textContent = newTime.toFixed(2);
-     
+     },
+    updateSummary() {
+        document.querySelector('#stratagems-called').textContent = activeGame.called;
+        document.querySelector('#points-earned').textContent = activeGame.score;
+        document.querySelector('#mistakes-made').textContent = activeGame.mistakes;
      },
      update: function() {
          this.clearStratagemQueue();
@@ -184,24 +199,32 @@ function handleKeydown(e) {
         if (activeGame.checkComplete()) {
             // When a stratagem has successfully been inputted
             activeGame.incrimentScore();
+            activeGame.called++;
             activeGame.index = 0;
             activeGame.nextStratagem();
             activeGame.stratagemList.push(activeGame.getRandomStratagems(1)[0]);
             DOMstuff.updateScore(activeGame.score);
+            DOMstuff.updateSummary();
             DOMstuff.update();
             }
         }
     else {
         // When the wrong key is pressed
         activeGame.index = 0;
+        activeGame.mistakes++;
         DOMstuff.markSequenceNeutral;
+        DOMstuff.updateSummary();
         DOMstuff.update();
         }     
 }
 
-//********************************//
-
-setInterval(()=>{DOMstuff.updateTimer(activeGame.timer.getRemaining())}, 100)
+//***************Monitor game timer*****************//
+setInterval(()=>{
+    DOMstuff.updateTimer(activeGame.timer.getRemaining())
+    if (activeGame.timer.isExpired()) {
+        document.querySelector('.container-outer').classList.remove('hidden');
+    }
+}, 100)
 
 
 // button support for mobile
@@ -217,7 +240,11 @@ for(let btn of dBox.children) {
 }
 
 document.addEventListener("keydown", handleKeydown) 
-//document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'ArrowDown'}));
-document.querySelector(".test-button").addEventListener("click", ()=> {
-  console.log(activeGame.timer.isExpired());
+
+//******Logic for restarting game **********/
+document.querySelector(".try-again").addEventListener("click", ()=> {
+  activeGame = new GameController();
+  document.querySelector('.container-outer').classList.add('hidden');
+  DOMstuff.update();
+  DOMstuff.updateScore(0);
 } )
