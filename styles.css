@@ -4,8 +4,11 @@ body {
     background-color: rgb(45, 43, 43);
     color: rgb(214, 205, 205);
     font-family:'Courier New', Courier, monospace;
+    position: relative;
 }
-
+h1 {
+    margin: 0;
+}
 .background-logo {
     position: fixed;
     top: 50%;
@@ -123,3 +126,58 @@ main {
   grid-column: 2/3;
   grid-row: 3/4;
     }
+.container-outer {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-header {
+    background: rgba(0, 0, 0, 0.738);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content
+}
+
+.container-header h1{
+    color: yellow;
+    width: fit-content;
+    flex: 0;
+}
+
+.decoration {
+    max-height: 2.7rem;
+    flex: 1;
+}
+.container-inner {
+    display: flex;
+    flex-direction: column;
+    background: rgba(117, 110, 110, 0.622);
+    text-align: center;
+    width: min(90%, 400px);
+    backdrop-filter: blur(3px);
+}
+
+.container-inner h2 {
+    background: rgba(28, 27, 27, 0.793);
+    margin: 0;
+}
+
+.container-inner h3 {
+    color: white;
+}
+
+.try-again {
+    color: rgba(28, 27, 27, 0.793);;
+    font-size: 34px;
+    font-family:'Courier New', Courier, monospace;
+    background: yellow;
+    border: solid rgba(28, 27, 27, 0.793) 4px;
+}
