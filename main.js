@@ -154,6 +154,31 @@ const DOMstuff = {
             stratagemQueueEl.removeChild(stratagemQueueEl.firstChild);
             }
      },
+     flashPointsPopup: function(pointsEarned) {
+        const body = document.querySelector('body')
+        const pointsPopupEl = document.createElement('div');
+        pointsPopupEl.classList.add('points-popup');
+        const pointsEl = document.createElement('h1');
+        pointsEl.textContent = `+${pointsEarned}`;
+        if (pointsEarned <= 200) {
+            pointsEl.classList.add('low')
+        }
+        else if (pointsEarned < 300) {
+            pointsEl.classList.add('medium')
+        }
+        else if (pointsEarned >= 300) {
+            pointsEl.classList.add('high')
+        }
+
+        pointsPopupEl.append(pointsEl);
+        body.append(pointsPopupEl);
+        // Remove the popup after a delay
+        setTimeout(()=>{
+            pointsPopupEl.remove();
+        }, 300)
+        
+       
+     },
      clearCurrentStratagem: function() {
         const currentStratagemEl = document.querySelector(".current-stratagem");
         while(currentStratagemEl.firstChild) {
@@ -201,11 +226,13 @@ function handleKeydown(e) {
         activeGame.index++;
         if (activeGame.checkComplete()) {
             // When a stratagem has successfully been inputted
-            activeGame.incrimentScore(activeGame.currentStratagem.getPointValue());
+            const pointsEarned = activeGame.currentStratagem.getPointValue();
+            activeGame.incrimentScore(pointsEarned);
             activeGame.called++;
             activeGame.index = 0;
             activeGame.nextStratagem();
             activeGame.stratagemList.push(activeGame.getRandomStratagems(1)[0]);
+            DOMstuff.flashPointsPopup(pointsEarned)
             DOMstuff.updateScore(activeGame.score);
             DOMstuff.updateSummary();
             DOMstuff.update();
@@ -220,7 +247,7 @@ function handleKeydown(e) {
         DOMstuff.update();
         }     
 }
-
+DOMstuff.flashPointsPopup(300);
 //***************Monitor game timer*****************//
 setInterval(()=>{
     DOMstuff.updateTimer(activeGame.timer.getRemaining())

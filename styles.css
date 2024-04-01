@@ -57,10 +57,6 @@ h1 {
     border: dashed yellow 3px;
 }
 
-main {
-
-}
-
 .current-stratagem {
     display: grid;
     grid: 1fr 1fr / 1fr 3fr;
@@ -128,7 +124,7 @@ main {
   grid-column: 2/3;
   grid-row: 3/4;
     }
-.container-outer {
+.container-outer, .points-popup {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -187,4 +183,21 @@ main {
 
 .hidden {
     display: none;
+}
+
+.points-popup {
+    font-size: 17vw;
+    top: 30%;
+}
+
+.points-popup .low {
+    color: rgba(255, 255, 0, 0.503);
+}
+
+.points-popup .medium {
+    color: rgba(255, 149, 0, 0.503);
+}
+
+.points-popup .high {
+    color: rgba(255, 0, 0, 0.503);
 }
