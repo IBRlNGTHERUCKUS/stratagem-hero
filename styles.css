@@ -185,9 +185,21 @@ h1 {
     display: none;
 }
 
+@keyframes fadeout {
+    from {
+        filter: opacity(1)
+    }
+    to {
+        filter: opacity(0)
+    }
+
+}
+
 .points-popup {
     font-size: 17vw;
     top: 30%;
+    animation-name: fadeout;
+    animation-duration: 1.5s;
 }
 
 .points-popup .low {

@@ -175,7 +175,7 @@ const DOMstuff = {
         // Remove the popup after a delay
         setTimeout(()=>{
             pointsPopupEl.remove();
-        }, 300)
+        }, 1000)
         
        
      },
@@ -247,7 +247,6 @@ function handleKeydown(e) {
         DOMstuff.update();
         }     
 }
-DOMstuff.flashPointsPopup(300);
 //***************Monitor game timer*****************//
 setInterval(()=>{
     DOMstuff.updateTimer(activeGame.timer.getRemaining())
