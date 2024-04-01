@@ -9,6 +9,9 @@ class Stratagem {
     getSequenceInput(index) {
         return this.sequence[index];
      }
+    getPointValue() {
+        return this.sequence.length * 50;
+    }
 }
 
 function getRandomInt(min, max) {
@@ -65,8 +68,8 @@ class GameController {
         }
         return list
     }
-    incrimentScore() {
-        this.score += 100;
+    incrimentScore(value) {
+        this.score += value;
         console.log(this.score);
      }
     checkMatch(key) {
@@ -198,7 +201,7 @@ function handleKeydown(e) {
         activeGame.index++;
         if (activeGame.checkComplete()) {
             // When a stratagem has successfully been inputted
-            activeGame.incrimentScore();
+            activeGame.incrimentScore(activeGame.currentStratagem.getPointValue());
             activeGame.called++;
             activeGame.index = 0;
             activeGame.nextStratagem();
