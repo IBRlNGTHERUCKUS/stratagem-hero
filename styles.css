@@ -145,8 +145,8 @@ h1 {
     top: 0px;
     left: 0px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 .container-header {
@@ -188,11 +188,12 @@ h1 {
 }
 
 .try-again {
-    color: rgba(28, 27, 27, 0.793);;
+    color: black;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
     font-size: 34px;
-    font-family:'Courier New', Courier, monospace;
+    font-family: commando, 'Courier New', Courier, monospace;
     background: yellow;
-    border: solid rgba(28, 27, 27, 0.793) 4px;
+    padding: 4px; 
 }
 
 .hidden {
